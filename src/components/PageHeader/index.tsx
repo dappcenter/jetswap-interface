@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { Heading, IconButton, Text, Flex, useModal } from '@pancakeswap-libs/uikit'
+import { Heading, IconButton, Text, Flex, useModal } from 'jetswap-uikit'
 import SettingsModal from './SettingsModal'
 import RecentTransactionsModal from './RecentTransactionsModal'
 
@@ -48,7 +48,7 @@ const PageHeader = ({ title, description, children }: PageHeaderProps) => {
         <Details>
           <Heading mb="8px">{title}</Heading>
           {description && (
-            <Text color="textSubtle" fontSize="14px">
+            <Text color="textDisabled" fontSize="14px">
               {description}
             </Text>
           )}

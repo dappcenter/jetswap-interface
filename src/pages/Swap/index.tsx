@@ -1,8 +1,8 @@
 import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { ArrowDown } from 'react-feather'
-import { CardBody, ArrowDownIcon, Button, IconButton, Text } from '@pancakeswap-libs/uikit'
-import { ThemeContext } from 'styled-components'
+import { CardBody, ArrowDoubleIcon, Button, IconButton, Text } from 'jetswap-uikit'
+import { ThemeContext }  from 'styled-components'
 import AddressInputPanel from 'components/AddressInputPanel'
 import Card, { GreyCard } from 'components/Card'
 import { AutoColumn } from 'components/Column'
@@ -38,6 +38,10 @@ import { TranslateString } from 'utils/translateTextHelpers'
 import PageHeader from 'components/PageHeader'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import AppBody from '../AppBody'
+
+
+import Background from '../../components/Background'
+
 
 const { main: Main } = TYPE
 
@@ -283,6 +287,7 @@ const Swap = () => {
 
   return (
     <>
+    
       <TokenWarningModal
         isOpen={urlLoadedTokens.length > 0 && !dismissTokenWarning}
         tokens={urlLoadedTokens}
@@ -339,7 +344,7 @@ const Swap = () => {
                       style={{ borderRadius: '50%' }}
                       size="sm"
                     >
-                      <ArrowDownIcon color="primary" width="24px" />
+                      <ArrowDoubleIcon color="primary" width="24px" />
                     </IconButton>
                   </ArrowWrapper>
                   {recipient === null && !showWrap && isExpertMode ? (
@@ -489,6 +494,7 @@ const Swap = () => {
         </Wrapper>
       </AppBody>
       <AdvancedSwapDetailsDropdown trade={trade} />
+      
     </>
   )
 }
